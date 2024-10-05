@@ -57,7 +57,7 @@ docker build -t my-pokemon-web .
 Step 3: Run the Docker container locally:
 
 ```bash
-docker run -p 3000:3000 -d my-pokemon-web
+docker run -p 3000:3000 --name my-pokemon-web -d my-pokemon-web
 ```
 
 ### Use Docker Compose
