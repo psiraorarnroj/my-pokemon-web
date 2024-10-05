@@ -1,0 +1,16 @@
+@import "@/app/assets/styles/color.scss";
+
+.button-container {
+  color: $color-primary;
+  background-color: transparent;
+  border: 1px solid $color-primary;
+
+  &:hover {
+    color: $color-page-background;
+    background-color: $color-primary;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
