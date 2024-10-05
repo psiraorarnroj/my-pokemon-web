@@ -1,0 +1,384 @@
+$color-primary: #024e74;
+$color-primary-10: #acd2e5;
+$color-primary-20: #3887af;
+$color-primary-40: #003a57;
+$color-primary-50: #002a3f;
+
+$color-secondary: #ebf8fe;
+$color-secondary-10: #f4fcff;
+$color-secondary-20: #f4fcff;
+$color-secondary-40: #d5ebf5;
+$color-secondary-50: #d5ebf5;
+
+$color-accent: #15bebf;
+$color-accent-10: #aff9fa;
+$color-accent-20: #3dd5d6;
+$color-accent-40: #009090;
+$color-accent-50: #006468;
+
+$color-error: #d40300;
+$color-error-10: #ffe7e7;
+$color-error-20: #ffbfbe;
+$color-error-40: #ab0200;
+$color-error-50: #670100;
+
+$color-warning: #ffbc10;
+$color-warning-10: #ffe8ae;
+$color-warning-20: #ffce4f;
+$color-warning-40: #f2ae00;
+$color-warning-50: #d09600;
+
+$color-success: #2c8300;
+$color-success-10: #bfddb0;
+$color-success-20: #63a443;
+$color-success-40: #216400;
+$color-success-50: #113200;
+
+$color-neutral-light: #fdfdfd;
+$color-neutral-dark: #23292b;
+
+$color-page-background: #f6f6f7;
+$color-component-stroke: #e3e1e5;
+$color-secondary-text: #384145;
+
+// Colors
+.color-primary {
+  color: $color-primary !important;
+}
+.color-primary-10 {
+  color: $color-primary-10 !important;
+}
+.color-primary-20 {
+  color: $color-primary-20 !important;
+}
+.color-primary-40 {
+  color: $color-primary-40 !important;
+}
+.color-primary-50 {
+  color: $color-primary-50 !important;
+}
+
+.color-secondary {
+  color: $color-secondary !important;
+}
+.color-secondary-10 {
+  color: $color-secondary-10 !important;
+}
+.color-secondary-20 {
+  color: $color-secondary-20 !important;
+}
+.color-secondary-40 {
+  color: $color-secondary-40 !important;
+}
+.color-secondary-50 {
+  color: $color-secondary-50 !important;
+}
+
+.color-accent {
+  color: $color-accent !important;
+}
+.color-accent-10 {
+  color: $color-accent-10 !important;
+}
+.color-accent-20 {
+  color: $color-accent-20 !important;
+}
+.color-accent-40 {
+  color: $color-accent-40 !important;
+}
+.color-accent-50 {
+  color: $color-accent-50 !important;
+}
+
+.color-error {
+  color: $color-error !important;
+}
+.color-error-10 {
+  color: $color-error-10 !important;
+}
+.color-error-20 {
+  color: $color-error-20 !important;
+}
+.color-error-40 {
+  color: $color-error-40 !important;
+}
+.color-error-50 {
+  color: $color-error-50 !important;
+}
+
+.color-warning {
+  color: $color-warning !important;
+}
+.color-warning-10 {
+  color: $color-warning-10 !important;
+}
+.color-warning-20 {
+  color: $color-warning-20 !important;
+}
+.color-warning-40 {
+  color: $color-warning-40 !important;
+}
+.color-warning-50 {
+  color: $color-warning-50 !important;
+}
+
+.color-success {
+  color: $color-success !important;
+}
+.color-success-10 {
+  color: $color-success-10 !important;
+}
+.color-success-20 {
+  color: $color-success-20 !important;
+}
+.color-success-40 {
+  color: $color-success-40 !important;
+}
+.color-success-50 {
+  color: $color-success-50 !important;
+}
+
+.color-neutral-light {
+  color: $color-neutral-light !important;
+}
+.color-neutral-dark {
+  color: $color-neutral-dark !important;
+}
+
+.color-page-background {
+  color: $color-page-background !important;
+}
+.color-component-stroke {
+  color: $color-component-stroke !important;
+}
+.color-secondary-text {
+  color: $color-secondary-text !important;
+}
+
+// Background Colors
+.bg-color-primary {
+  background-color: $color-primary !important;
+}
+.bg-color-primary-10 {
+  background-color: $color-primary-10 !important;
+}
+.bg-color-primary-20 {
+  background-color: $color-primary-20 !important;
+}
+.bg-color-primary-40 {
+  background-color: $color-primary-40 !important;
+}
+.bg-color-primary-50 {
+  background-color: $color-primary-50 !important;
+}
+
+.bg-color-secondary {
+  background-color: $color-secondary !important;
+}
+.bg-color-secondary-10 {
+  background-color: $color-secondary-10 !important;
+}
+.bg-color-secondary-20 {
+  background-color: $color-secondary-20 !important;
+}
+.bg-color-secondary-40 {
+  background-color: $color-secondary-40 !important;
+}
+.bg-color-secondary-50 {
+  background-color: $color-secondary-50 !important;
+}
+
+.bg-color-accent {
+  background-color: $color-accent !important;
+}
+.bg-color-accent-10 {
+  background-color: $color-accent-10 !important;
+}
+.bg-color-accent-20 {
+  background-color: $color-accent-20 !important;
+}
+.bg-color-accent-40 {
+  background-color: $color-accent-40 !important;
+}
+.bg-color-accent-50 {
+  background-color: $color-accent-50 !important;
+}
+
+.bg-color-error {
+  background-color: $color-error !important;
+}
+.bg-color-error-10 {
+  background-color: $color-error-10 !important;
+}
+.bg-color-error-20 {
+  background-color: $color-error-20 !important;
+}
+.bg-color-error-40 {
+  background-color: $color-error-40 !important;
+}
+.bg-color-error-50 {
+  background-color: $color-error-50 !important;
+}
+
+.bg-color-warning {
+  background-color: $color-warning !important;
+}
+.bg-color-warning-10 {
+  background-color: $color-warning-10 !important;
+}
+.bg-color-warning-20 {
+  background-color: $color-warning-20 !important;
+}
+.bg-color-warning-40 {
+  background-color: $color-warning-40 !important;
+}
+.bg-color-warning-50 {
+  background-color: $color-warning-50 !important;
+}
+
+.bg-color-success {
+  background-color: $color-success !important;
+}
+.bg-color-success-10 {
+  background-color: $color-success-10 !important;
+}
+.bg-color-success-20 {
+  background-color: $color-success-20 !important;
+}
+.bg-color-success-40 {
+  background-color: $color-success-40 !important;
+}
+.bg-color-success-50 {
+  background-color: $color-success-50 !important;
+}
+
+.bg-color-neutral-light {
+  background-color: $color-neutral-light !important;
+}
+.bg-color-neutral-dark {
+  background-color: $color-neutral-dark !important;
+}
+
+.bg-color-page-background {
+  background-color: $color-page-background !important;
+}
+.bg-color-component-stroke {
+  background-color: $color-component-stroke !important;
+}
+.bg-color-secondary-text {
+  background-color: $color-secondary-text !important;
+}
+
+// Border Colors
+.border-color-primary {
+  border-color: $color-primary !important;
+}
+.border-color-primary-10 {
+  border-color: $color-primary-10 !important;
+}
+.border-color-primary-20 {
+  border-color: $color-primary-20 !important;
+}
+.border-color-primary-40 {
+  border-color: $color-primary-40 !important;
+}
+.border-color-primary-50 {
+  border-color: $color-primary-50 !important;
+}
+
+.border-color-secondary {
+  border-color: $color-secondary !important;
+}
+.border-color-secondary-10 {
+  border-color: $color-secondary-10 !important;
+}
+.border-color-secondary-20 {
+  border-color: $color-secondary-20 !important;
+}
+.border-color-secondary-40 {
+  border-color: $color-secondary-40 !important;
+}
+.border-color-secondary-50 {
+  border-color: $color-secondary-50 !important;
+}
+
+.border-color-accent {
+  border-color: $color-accent !important;
+}
+.border-color-accent-10 {
+  border-color: $color-accent-10 !important;
+}
+.border-color-accent-20 {
+  border-color: $color-accent-20 !important;
+}
+.border-color-accent-40 {
+  border-color: $color-accent-40 !important;
+}
+.border-color-accent-50 {
+  border-color: $color-accent-50 !important;
+}
+
+.border-color-error {
+  border-color: $color-error !important;
+}
+.border-color-error-10 {
+  border-color: $color-error-10 !important;
+}
+.border-color-error-20 {
+  border-color: $color-error-20 !important;
+}
+.border-color-error-40 {
+  border-color: $color-error-40 !important;
+}
+.border-color-error-50 {
+  border-color: $color-error-50 !important;
+}
+
+.border-color-warning {
+  border-color: $color-warning !important;
+}
+.border-color-warning-10 {
+  border-color: $color-warning-10 !important;
+}
+.border-color-warning-20 {
+  border-color: $color-warning-20 !important;
+}
+.border-color-warning-40 {
+  border-color: $color-warning-40 !important;
+}
+.border-color-warning-50 {
+  border-color: $color-warning-50 !important;
+}
+
+.border-color-success {
+  border-color: $color-success !important;
+}
+.border-color-success-10 {
+  border-color: $color-success-10 !important;
+}
+.border-color-success-20 {
+  border-color: $color-success-20 !important;
+}
+.border-color-success-40 {
+  border-color: $color-success-40 !important;
+}
+.border-color-success-50 {
+  border-color: $color-success-50 !important;
+}
+
+.border-color-neutral-light {
+  background-color: $color-neutral-light !important;
+}
+.border-color-neutral-dark {
+  background-color: $color-neutral-dark !important;
+}
+
+.border-color-page-background {
+  background-color: $color-page-background !important;
+}
+.border-color-component-stroke {
+  background-color: $color-component-stroke !important;
+}
+.border-color-secondary-text {
+  background-color: $color-secondary-text !important;
+}

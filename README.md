@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## My Pokemon Web
 
-## Getting Started
+This is a web application that allows users to view pokemon.
 
-First, run the development server:
+## Requirements
+
+- Node 18
+- Git (optional)
+- Docker (optional)
+
+## Common setup
+
+Clone the repo and install the dependencies.
+
+```bash
+git clone https://github.com/psiraorarnroj/my-pokemon-web.git
+cd my-pokemon-web
+npm install
+```
+
+## Steps for develop and build application
+
+### Develop
+
+To develop the application, run the following
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) and take a look around.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To run the application in production mode, run the following
 
-## Learn More
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Use Docker
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You can also run this app as a Docker container:
+Step 1: Clone the repo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+git clone https://github.com/psiraorarnroj/my-pokemon-web.git
+```
 
-## Deploy on Vercel
+Step 2: Build the Docker image
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+docker build -t my-pokemon-web .
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Step 3: Run the Docker container locally:
+
+```bash
+docker run -p 3000:3000 --name my-pokemon-web -d my-pokemon-web
+```
+
+### Use Docker Compose
+
+You can also run this app as a Docker Compose container:
+Step 1: Clone the repo
+
+```bash
+git clone https://github.com/psiraorarnroj/my-pokemon-web.git
+```
+
+Step 2: Build the Docker Compose image
+
+```bash
+docker-compose build
+```
+
+Step 3: Run the Docker Compose container locally:
+
+```bash
+docker-compose up -d
+```
