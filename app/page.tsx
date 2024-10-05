@@ -74,6 +74,11 @@ const Home = () => {
     });
   };
 
+  const handleSortChange = (sortValue: string) => {
+    setSort(sortValue);
+    setCurrentPage(1);
+  };
+
   const handlePreviousPage = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
@@ -94,7 +99,7 @@ const Home = () => {
                 type="radio"
                 value={option.value}
                 checked={sort === option.value}
-                onChange={() => setSort(option.value)}
+                onChange={() => handleSortChange(option.value)}
               />{" "}
               {option.label}
             </label>
