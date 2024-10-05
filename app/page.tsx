@@ -90,12 +90,14 @@ const Home = () => {
   return (
     <div className="homePage-container h-screen w-screen p-10">
       <div className="mb-8 grid grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-10">
-        <h3 className="text-center md:text-left">All the Pokemon!</h3>
+        <h3 className="text-center font-medium md:text-left">
+          All the Pokemon!
+        </h3>
         <div className="flex items-center justify-center gap-6 md:justify-end">
           {sortOptions.map((option) => (
             <label key={option.value}>
               <input
-                className="mr-2"
+                className="mr-2 scale-150 accent-[#024E74]"
                 type="radio"
                 value={option.value}
                 checked={sort === option.value}
@@ -106,7 +108,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="mb-8 flex flex-wrap items-center justify-center gap-6 lg:justify-between">
+      <div className="mb-8 flex flex-wrap items-center justify-center gap-6 md:justify-between">
         {loading ? (
           <p>Loading...</p>
         ) : (
@@ -119,7 +121,7 @@ const Home = () => {
           ))
         )}
       </div>
-      <div className="absolute bottom-0 left-0 right-0 flex justify-between p-10">
+      <div className="absolute left-0 right-0 flex justify-between p-10 md:bottom-0">
         <Button
           label={`Previous ${isFirstPage ? 0 : limit}`}
           onClick={handlePreviousPage}
