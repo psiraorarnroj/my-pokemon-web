@@ -32,16 +32,15 @@ const Home = () => {
       setLoading(true);
       const data = await getAllPokemonList();
 
-      const detailedPokemonList = await Promise.all(
-        data?.results?.map(async (pokemon) => {
-          const details = await getPokemonDetail(pokemon?.url);
-          return {
-            ...pokemon,
-            id: details?.id,
-            image: details?.sprites?.front_default,
-          };
-        }),
-      );
+      const detailedPokemonList: IPokemon[] = [];
+      for (const pokemon of data.results) {
+        const details = await getPokemonDetail(pokemon?.url);
+        detailedPokemonList.push({
+          ...pokemon,
+          id: details?.id,
+          image: details?.sprites?.front_default,
+        });
+      }
 
       setFullPokemonList(detailedPokemonList);
       setLoading(false);
