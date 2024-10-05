@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Card from "@/app/components/Card";
 import Button from "@/app/components/Button";
 import { getAllPokemonList, getPokemonDetail } from "@/app/services/pokeapi";
-import { IPokemonList, IPokemon } from "@/app/interfaces/IPokemon";
+import { IPokemon } from "@/app/interfaces/IPokemon";
 import "./style.scss";
 
 const sortOptions = [
@@ -31,9 +31,21 @@ const Home = () => {
     const fetchPokemon = async () => {
       setLoading(true);
       const data = await getAllPokemonList();
+      setFullPokemonList(data.results);
+      setLoading(false);
+    };
 
+    fetchPokemon();
+  }, []);
+
+  useEffect(() => {
+    const fetchPokemonDetails = async () => {
+      setLoading(true);
+
+      const sortedList = sortPokemonList(fullPokemonList, sort);
+      const currentPagePokemon = sortedList.slice(offset, offset + limit);
       const detailedPokemonList: IPokemon[] = [];
-      for (const pokemon of data.results) {
+      for (const pokemon of currentPagePokemon) {
         const details = await getPokemonDetail(pokemon?.url);
         detailedPokemonList.push({
           ...pokemon,
@@ -42,17 +54,13 @@ const Home = () => {
         });
       }
 
-      setFullPokemonList(detailedPokemonList);
+      setPaginatedPokemonList(detailedPokemonList);
       setLoading(false);
     };
 
-    fetchPokemon();
-  }, []);
-
-  useEffect(() => {
-    const sortedList = sortPokemonList(fullPokemonList, sort);
-    const paginatedList = sortedList.slice(offset, offset + limit);
-    setPaginatedPokemonList(paginatedList);
+    if (fullPokemonList.length > 0) {
+      fetchPokemonDetails();
+    }
   }, [fullPokemonList, sort, currentPage, offset]);
 
   const sortPokemonList = (list: IPokemon[], sortBy: string): IPokemon[] => {
