@@ -44,15 +44,16 @@ const Home = () => {
 
       const sortedList = sortPokemonList(fullPokemonList, sort);
       const currentPagePokemon = sortedList.slice(offset, offset + limit);
-      const detailedPokemonList: IPokemon[] = [];
-      for (const pokemon of currentPagePokemon) {
-        const details = await getPokemonDetail(pokemon?.url);
-        detailedPokemonList.push({
-          ...pokemon,
-          id: details?.id,
-          image: details?.sprites?.front_default,
-        });
-      }
+      const detailedPokemonList: IPokemon[] = await Promise.all(
+        currentPagePokemon.map(async (pokemon) => {
+          const details = await getPokemonDetail(pokemon?.url);
+          return {
+            ...pokemon,
+            id: details?.id,
+            image: details?.sprites?.front_default,
+          };
+        }),
+      );
 
       setPaginatedPokemonList(detailedPokemonList);
       setLoading(false);
